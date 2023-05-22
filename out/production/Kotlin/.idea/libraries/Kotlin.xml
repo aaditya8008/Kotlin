@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Kotlin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/helloworld.jar!/" />
+      <root url="jar://$PROJECT_DIR$/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/when.jar!/" />
+      <root url="jar://$PROJECT_DIR$/operators.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Rogh.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ifelse.jar!/" />
+      <root url="jar://$PROJECT_DIR$/fuctionhacks.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Loops.jar!/" />
+      <root url="jar://$PROJECT_DIR$/functionoverloading.jar!/" />
+      <root url="jar://$PROJECT_DIR$/array.jar!/" />
+      <root url="jar://$PROJECT_DIR$/variables.jar!/" />
+      <root url="jar://$PROJECT_DIR$/logicalopandshortcircuiting.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
