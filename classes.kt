@@ -23,6 +23,6 @@ fun decide(){
     if(age>21)
     println("Can drive")
     else
-    println("Can't drive")
+    println("Can't drive  ")
 }
 }

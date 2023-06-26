@@ -1,8 +1,11 @@
 fun main() {
     var car = automobile("car", 4, 5, true)
     var person = person("Yo", 73)
+    var p2 = person("Unknown")
     println(person.age)
     println(person.name)
+    println(p2.name)
+    println(p2.age)
     println(car.x)
 }
 
@@ -14,7 +17,7 @@ class automobile(val name: String, val tyres: Int, val maxseating: Int, hasairba
 
 class nocondtruct {}
 
-class person(namee: String, agee: Int) {
+class person(val namee: String, val agee: Int) {
     init {
         println("HOLLAA") // called instantly when class is used
     }
@@ -23,4 +26,8 @@ class person(namee: String, agee: Int) {
         println("HOLLAa aGAINNN")
     }
     var age: Int = agee
+
+    constructor(nameparam: String): this(nameparam,agee=15){
+
+    }
 }

@@ -1,26 +1,16 @@
+import java.util.*
+
 fun main() {
-    var car = automobile("car", 4, 5, true)
-    var person = person("Yo", 73)
-    println(person.age)
-    println(person.name)
-    println(car.x)
+    val p1 = Person("Aditya", 18)
+    val p2 = Person("Mom", 19)
+    println(p1.canvote())
+    println(p2.canvote())
+    p1.age = 73
+    println(p1.canvote())
 }
 
-class automobile(val name: String, val tyres: Int, val maxseating: Int, hasairbag: Boolean) {
-    var x = hasairbag // not a property but only parameter
-    fun drive() {}
-    fun applybrakes() {}
-}
-
-class nocondtruct {}
-
-class person(namee: String, agee: Int) {
-    init{
-        println("HOLLAA")       //called instantly when class is used
+class Person(val name: String, var age: Int) {
+    fun canvote(): Boolean {
+        return age > 18
     }
-    val name: String = "$namee Aditya"
-    init{
-        println("HOLLAa aGAINNN")
-    }
-    var age: Int = agee
 }
