@@ -1,16 +1,41 @@
-import java.util.*
-
 fun main() {
-    val p1 = Person("Aditya", 18)
-    val p2 = Person("Mom", 19)
-    println(p1.canvote())
-    println(p2.canvote())
-    p1.age = 73
-    println(p1.canvote())
-}
-
-class Person(val name: String, var age: Int) {
-    fun canvote(): Boolean {
-        return age > 18
+    val circle=Circle(4.0)
+    val player=Player("Smiley")
+    if(circle is Circle){               //typechecking
+        println("This is Circle")
+    }
+    val arr=arrayOf(circle,player)
+    for(i in arr){
+        if(i is Circle){
+            println(i.area())
+        }
+        else{
+            (i as Player).saymyname()
+        }
     }
 }
+interface Draggable {
+    fun drag()
+}
+
+abstract class shape : Draggable { // same like classes but no bracket
+
+    abstract fun area(): Double
+}
+
+class Circle(val radii: Double) : shape() {
+    override fun area(): Double {
+        return Math.PI * radii * radii
+    }
+    override fun drag() {
+        println("Circle is Dragging")
+    }
+}
+
+
+
+class Player(val name: String) : Draggable {
+    override fun drag() = println("$name is dragging")
+fun saymyname()=println("Hey my name id - $name")
+}
+
