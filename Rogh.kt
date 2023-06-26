@@ -1,25 +1,17 @@
 fun main() {
-   
-}
- open class A{                  //public
-public var a=10             
-private var b=20              //only this class
-internal var c=30             
-protected var d=40            //sub classes
-
-
-
+    myclass.f()
+    myclass.another.g()
 }
 
- class B:A(){          
-    fun test(){
-        println(a)
-        println(b)
-        println(c)
-        println(d)
-
+class myclass {                 //one companion in one class
+    companion object myobject { // no need for object name during referance
+        fun f() {
+            println("HElloo!!")
+        }
     }
-
+    object another {
+        fun g() {
+            println("galloo!!")
+        }
+    }
 }
-
-
