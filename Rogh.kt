@@ -1,17 +1,16 @@
-fun main() {
-    myclass.f()
-    myclass.another.g()
+fun main(){
+calculatetimeandrun {
+    loop(1000000)
 }
-
-class myclass {                 //one companion in one class
-    companion object myobject { // no need for object name during referance
-        fun f() {
-            println("HElloo!!")
-        }
-    }
-    object another {
-        fun g() {
-            println("galloo!!")
-        }
+}
+fun calculatetimeandrun(fn:()->Unit){
+    val start =System.currentTimeMillis()
+    fn()
+    val end =System.currentTimeMillis()
+    println("time taken "+(end - start) +"ms")
+}
+fun loop(n: Long){
+    for(i in 1..n){
+    //
     }
 }
