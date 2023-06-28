@@ -1,16 +1,11 @@
 fun main(){
-calculatetimeandrun {
-    loop(1000000)
+add(1,2,3,4,5,6,7)
 }
-}
-fun calculatetimeandrun(fn:()->Unit){
-    val start =System.currentTimeMillis()
-    fn()
-    val end =System.currentTimeMillis()
-    println("time taken "+(end - start) +"ms")
-}
-fun loop(n: Long){
-    for(i in 1..n){
-    //
+
+fun add(vararg values:Int ){                //values will be array
+    var sum=0
+    for(i in values){
+        sum+=i
     }
+    println(sum)
 }
